@@ -13,3 +13,30 @@ header ul li a{
 header ul li a:hover, .active{
     color:  rgb(169, 2, 2);
 }
+
+.card-movie{
+    border: 2px solid rgb(169, 2, 2);
+    position: relative;
+}
+
+.card-movie img{
+    max-width: 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color:  rgb(169, 2, 2);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card-movie:hover .overlay{
+    opacity: 0.8;
+}
+

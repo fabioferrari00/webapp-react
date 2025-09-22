@@ -58,3 +58,7 @@ header ul li a:hover, .active{
     background-color: black;
     color: rgb(169, 2, 2);
 }
+
+.text-red{
+    color: rgb(169, 2, 2);
+}

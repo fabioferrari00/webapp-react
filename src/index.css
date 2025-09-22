@@ -53,3 +53,8 @@ header ul li a:hover, .active{
     background-color: rgb(118, 0, 0);
     color: white;
 }
+
+.card{
+    background-color: black;
+    color: rgb(169, 2, 2);
+}

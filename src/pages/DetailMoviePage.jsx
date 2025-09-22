@@ -34,6 +34,7 @@ const DetailMoviePage = () => {
               <p>Genere: {movie.genre}</p>
               <p>Anno di uscita: {movie.release_year}</p>
               <p>Diretto da: {movie.director}</p>
+              <p>Voto: {movie.average_vote}/5</p>
               <div className="reviews">
                 {/*movie.reviews.map((review) => {
                   return (

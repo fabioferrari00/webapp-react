@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const MoviesListPage = () => {
 
@@ -10,7 +11,6 @@ const MoviesListPage = () => {
     const fetchMovies = () =>{
         axios.get("http://localhost:3000/api/movies").then((resp) => {
             setMovies(resp.data);
-            console.log(resp.data);
         });
     }
 
@@ -28,14 +28,16 @@ const MoviesListPage = () => {
             <div className="row gy-3">
                 {movies.map(movie => {
                     return(
-                        <div className="col-12 col-md-6 col-lg-4" key={movie.id}>
-                            <div className="card-movie">
-                                <img src="./imgs/inception.jpg" className='movie-cover' alt="" />
+                        <div className="col-12 col-md-6 col-lg-4" >
+                            <div className="card-movie" key={movie.id}>
+                             <Link to={`/movies/${movie.id}`}>
+                                <img src={movie.image} className='movie-cover' alt="" />
                                 <div className="overlay">
                                     <h2>{movie.title}</h2>
                                     <p>{movie.genre}</p>
                                     <p>{movie.release_year}</p>
                                 </div>
+                            </Link> 
                             </div>
                         </div>
                     )

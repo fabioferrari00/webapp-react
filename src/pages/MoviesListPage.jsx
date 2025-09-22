@@ -27,15 +27,16 @@ const MoviesListPage = () => {
             </div>
             <div className="row gy-3">
                 {movies.map(movie => {
+                    const {id, title, image, genre, release_year} = movie; 
                     return(
-                        <div className="col-12 col-md-6 col-lg-4" >
-                            <div className="card-movie" key={movie.id}>
-                             <Link to={`/movies/${movie.id}`}>
-                                <img src={movie.image} className='movie-cover' alt="" />
+                        <div className="col-12 col-md-6 col-lg-4" key={id}>
+                            <div className="card-movie">
+                             <Link to={`/movies/${id}`}>
+                                <img src={image} className='movie-cover' alt="" />
                                 <div className="overlay">
-                                    <h2>{movie.title}</h2>
-                                    <p>{movie.genre}</p>
-                                    <p>{movie.release_year}</p>
+                                    <h2>{title}</h2>
+                                    <p>{genre}</p>
+                                    <p>{release_year}</p>
                                 </div>
                             </Link> 
                             </div>

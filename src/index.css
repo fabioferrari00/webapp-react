@@ -44,3 +44,12 @@ header ul li a:hover, .active{
     opacity: 0.8;
 }
 
+.btn-turn-list{
+    background-color: rgb(169, 2, 2);
+    color: white;
+}
+
+.btn-turn-list:hover {
+    background-color: rgb(118, 0, 0);
+    color: white;
+}

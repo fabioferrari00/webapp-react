@@ -5,14 +5,15 @@ import { useParams } from 'react-router-dom';
 
 const DetailMoviePage = () => {
 
-  const [movie, setMovie] = useState([]);
   const {id} =useParams()
+  const [movie, setMovie] = useState([]);
 
   const fetchMovie = () => {
 
     axios.get(`http://localhost:3000/api/movies/${id}`).then((resp) => {
       setMovie(resp.data)
-    })
+      console.log(resp.data)
+    }).catch((err) => console.log(err));
 
   }
 
@@ -33,10 +34,16 @@ const DetailMoviePage = () => {
               <p>Genere: {movie.genre}</p>
               <p>Anno di uscita: {movie.release_year}</p>
               <p>Diretto da: {movie.director}</p>
+              <div className="reviews">
+                {/*movie.reviews.map((review) => {
+                  return (
+                    <div>
+                      {review.name}
+                    </div>
+                  )
+                })*/}
+              </div>
             </div>
-        </div>
-        <div className="row">
-
         </div>
       </div>
     </div>

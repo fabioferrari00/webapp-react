@@ -11,7 +11,6 @@ const DetailMoviePage = () => {
   const fetchMovie = () => {
 
     axios.get(`http://localhost:3000/api/movies/${id}`).then((resp) => {
-      console.log(resp.data)
       setMovie(resp.data)
     }).catch((err) => console.log(err));
 
@@ -39,14 +38,15 @@ const DetailMoviePage = () => {
         </div>
         <div className="row">
           <div className="col-12 mt-3">
+            <h1 className="my-3 text-center" >RECENSIONI: </h1>
             <div className="reviews">
                {movie.reviews?.map((review) => {
                 return (
-                  <div class="card w-75 mb-3">
-                    <div class="card-body">
-                      <h5 class="card-title">{review.name}</h5>
-                      <p class="card-text">{review.text}</p>
-                      <p>{review.vote}</p>
+                  <div className="card mb-3">
+                    <div className="card-body">
+                      <h5 className="card-title"><strong>Writed by: </strong>{review.name}</h5>
+                      <p className="card-text">{review.text}</p>
+                      <p><strong>Vote: </strong>{review.vote}</p>
                     </div>
                   </div>
                 )

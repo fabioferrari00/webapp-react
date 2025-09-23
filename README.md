@@ -30,3 +30,19 @@ Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, p
 MILESTONE 4
 
 Continuate a lavorare sulla repo di react e se serve in quella di express per fare in modo che nella pagina di dettaglio ci sia una chiamata ajax che recupera il dettaglio del film comprese le sue recensioni.
+
+### Esercizio
+ 
+ Miglioriamo l’esperienza dell’utente inserendo 
+ 
+ MILESTONE 1 (BACKEND)
+ 
+ 
+Predisponiamo un’API per salvare nel database una nuova recensione legata ad un film
+Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+
+MILESTONE 2 (FRONTEND)
+
+Creiamo un componente che contenga il form per le recensioni
+Inseriamo questo componente nella pagina di dettaglio del film
+All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre

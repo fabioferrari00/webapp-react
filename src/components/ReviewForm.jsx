@@ -42,7 +42,7 @@ const ReviewForm = ({movieId, reloadReviews}) => {
                 <h3 className='text-center'>Aggiungi recensione</h3>
             </div>
         </div>
-        <div className="row">
+        <div className="form-add-reviews">
             <form onSubmit={handleSubmit}>
                 <div className="my-3">
                     <label htmlFor="" className='form-label'>Nome</label>
@@ -56,8 +56,8 @@ const ReviewForm = ({movieId, reloadReviews}) => {
                     <label htmlFor="" className='form-label'>Recensione</label>
                     <input type="text" name="text" id="text" placeholder='Scrivi la tua recensione' className='form-control' value={formData.text} onChange={setFieldValue}/>
                 </div>
-                <div className="my-3">
-                    <button className='btn btn-success'>Salva</button>
+                <div className="my-3 text-center">
+                    <button className='btn btn-reviews'>Salva</button>
                 </div>
             </form>
         </div>

@@ -27,14 +27,16 @@ const DetailMoviePage = () => {
             <div className="col-12">
                 <h1 className='text-center py-3'>{movie.title}</h1>
             </div>
-            <div className="col-6 bg-black">
-              <img src={movie.image} alt="" className="movie-img p-3"/>
-            </div>
-            <div className="col-6 bg-black text-red py-3">
-              <p>Genere: {movie.genre}</p>
-              <p>Anno di uscita: {movie.release_year}</p>
-              <p>Diretto da: {movie.director}</p>
-              <p>Voto: {movie.average_vote}/5</p>
+            <div className="movie-detail-card d-flex">
+              <div className="col-6">
+                <img src={movie.image} alt="" className="movie-img p-3"/>
+              </div>
+              <div className="col-6 text-red py-3">
+                <p>Genere: {movie.genre}</p>
+                <p>Anno di uscita: {movie.release_year}</p>
+                <p>Diretto da: {movie.director}</p>
+                <p>Voto: {movie.average_vote}/5</p>
+              </div>
             </div>
         </div>
         <div className="row">
@@ -43,7 +45,7 @@ const DetailMoviePage = () => {
             <div className="reviews">
                {movie.reviews?.map((review) => {
                 return (
-                  <div className="card mb-3">
+                  <div className="review-card mb-3">
                     <div className="card-body">
                       <h5 className="card-title"><strong>Writed by: </strong>{review.name}</h5>
                       <p className="card-text">{review.text}</p>

@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
+import ReviewForm from '../components/ReviewForm';
 
 const DetailMoviePage = () => {
 
@@ -54,6 +55,7 @@ const DetailMoviePage = () => {
             </div>
           </div>
         </div>
+        <ReviewForm movieId={id} reloadReviews={fetchMovie}/>
       </div>
     </div>
   )
